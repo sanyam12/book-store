@@ -22,7 +22,7 @@ class _StorePageState extends State<StorePage> {
   //Fetch All Books from the server.
   void fetchData() async {
     books = [];
-    var data = await http.get(Uri.parse("http://localhost:3000/getBooks"));
+    var data = await http.get(Uri.parse("https://book-store-i88v.onrender.com/getBooks"));
     if(data.statusCode==200){
       final json = jsonDecode(data.body);
       for(var i in json){
